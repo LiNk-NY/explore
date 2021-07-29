@@ -3,7 +3,7 @@ related: bioinformatics
 created_by: Bioconductor
 display_name: Bioconductor
 github_url: https://github.com/Bioconductor
-logo: Bioconductor.png
+logo: bioconductor.jpg
 released: May 1, 2002
 short_description: Bioconductor provides tools for the analysis and comprehension of high-throughput genomic data.
 topic: bioconductor
