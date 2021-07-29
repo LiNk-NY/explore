@@ -1,4 +1,5 @@
 ---
+aliases: bioconductor-package
 related: bioinformatics
 created_by: Bioconductor
 display_name: Bioconductor
