@@ -1,6 +1,5 @@
 ---
 items:
- - n3omaster/bachecubano
  - codestrange
  - codestrange/matcom-messenger
  - daxslab/fotorecarga
@@ -19,7 +18,6 @@ items:
  - pavelmc/multi-probe-swr-meter
  - stdevPavelmc/esp8266_wx_station
  - Pixely-Studios/NStart
- - ovillafuerte94/qvolax
 
 display_name: Made in Cuba
 created_by: lopezdp

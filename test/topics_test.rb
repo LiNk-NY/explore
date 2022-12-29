@@ -258,9 +258,13 @@ describe "topics" do
           lines = File.readlines(path)
 
           refute lines.empty?
-          assert_equal "---\n", lines[0], "expected file to start with Jekyll front matter ---"
+          assert_includes ["---\n", "---\r", "---\r\n"], lines[0],
+                          "expected file to start with Jekyll front matter ---"
 
-          end_index = lines.slice(1..-1).index("---\n")
+          all_lines = lines.slice(1..-1)
+          end_index = all_lines.index("---\n") ||
+                      all_lines.index("---\r") ||
+                      all_lines.index("---\r\n")
           assert end_index, "expected Jekyll front matter to end with ---"
         end
       end
@@ -292,7 +296,7 @@ describe "topics" do
         metadata = metadata_for(topics_dir, topic) || {}
 
         if metadata["short_description"]
-          valid_range = 1...MAX_SHORT_DESCRIPTION_LENGTH
+          valid_range = 1..MAX_SHORT_DESCRIPTION_LENGTH
           current_length = metadata["short_description"].length
           assert valid_range.cover?(current_length),
                  "must have a short_description no more than #{MAX_SHORT_DESCRIPTION_LENGTH} " \

@@ -1,6 +1,6 @@
 ---
 items:
- - pixijs/pixi.js
+ - pixijs/pixijs
  - photonstorm/phaser
  - melonjs/melonJS
  - gamelab/kiwi.js
@@ -21,6 +21,8 @@ items:
  - mrdoob/three.js
  - phoboslab/Impact
  - Cloud9c/taro
+ - replit/kaboom
+ - straker/kontra
 display_name: JavaScript Game Engines
 created_by: leereilly
 ---

@@ -16,7 +16,7 @@ MAX_RELATED_TOPIC_COUNT = 10
 
 MAX_SHORT_DESCRIPTION_LENGTH = 130
 
-TOPIC_REGEX = /\A[a-z0-9][a-z0-9-]*\Z/.freeze
+TOPIC_REGEX = /\A[a-z0-9][a-z0-9-]*\Z/
 
 def invalid_topic_message(topic)
   "'#{topic}' must be between 1-#{MAX_TOPIC_LENGTH} characters, start with a letter or number, " \
@@ -38,7 +38,12 @@ def topics_dir
 end
 
 def topic_dirs
-  Dir["#{topics_dir}/*"].select do |entry|
+  topic_directories = ENV.fetch("TOPIC_FILES", "topics/*").split(" ").map do |file|
+    directory = file.split("/")[1]
+    [topics_dir, directory].join("/")
+  end
+
+  Dir[*topic_directories].select do |entry|
     entry != "." && entry != ".." && File.directory?(entry)
   end
 end
@@ -62,7 +67,7 @@ def related_topics_for(topic)
   return [] unless metadata
   return [] unless metadata["related"]
 
-  metadata["related"].split(",")
+  metadata["related"].split(",").map(&:strip)
 end
 
 def aliases_for(topic)
@@ -70,7 +75,7 @@ def aliases_for(topic)
   return [] unless metadata
   return [] unless metadata["aliases"]
 
-  metadata["aliases"].split(",")
+  metadata["aliases"].split(",").map(&:strip)
 end
 
 def assert_oxford_comma(text)

@@ -1,13 +1,13 @@
 ---
 items:
  - trekhleb/javascript-algorithms
- - mui-org/material-ui
+ - mui/material-ui
  - ansible/ansible
  - Leaflet/Leaflet
  - denysdovhan/wtfjs
  - dimsemenov/PhotoSwipe
  - trailofbits/algo
- - uglide/RedisDesktopManager
+ - RedisInsight/RedisDesktopManager
  - trekhleb/homemade-machine-learning
  - vadimdemedes/ink
  - spaceship-prompt/spaceship-prompt
@@ -52,6 +52,7 @@ items:
  - komarserjio/notejam
  - ttag-org/ttag
  - vmagamedov/grpclib
+ - angrymouse/remote-functions
 
 display_name: Made in Ukraine
 image: made-in-ukraine.png

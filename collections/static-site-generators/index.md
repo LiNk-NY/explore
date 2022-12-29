@@ -8,7 +8,7 @@ items:
  - hexojs/hexo
  - vercel/next.js
  - getpelican/pelican
- - facebook/Docusaurus
+ - facebook/docusaurus
  - slatedocs/slate
  - nuxt/nuxt.js
  - gridsome/gridsome
@@ -21,8 +21,9 @@ items:
  - jaspervdj/hakyll
  - umijs/umi
  - abelljs/abell
- - snowpackjs/astro
+ - withastro/astro
  - tlienart/Franklin.jl
+ - getzola/zola
 display_name: Static Site Generators
 created_by: jakejarvis
 ---
